@@ -1,3 +1,5 @@
+/* 
+---------------- Root  */
 :root {
 	/* ### Primary */
 	--Cyan: hsl(179, 62%, 43%);
@@ -7,6 +9,154 @@
 	--Light-Gray: hsl(204, 43%, 93%);
 	--Grayish-Blue: hsl(218, 22%, 67%);
 
-    /* Font  */
-    --font: 'Karla', sans-serif;
+	/* Font  */
+	--font: "Karla", sans-serif;
+}
+
+/* 
+---------------- Reset CSS */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+body {
+	font-family: var(--font);
+	background: var(--Light-Gray);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container {
+	padding: 2.5rem 3.5rem 2.7rem 2.5rem;
+}
+.main {
+	max-width: 50vw;
+	background: white;
+	overflow: hidden;
+	border-radius: 10px;
+    box-shadow: 0 18px 28px -10px var(--Grayish-Blue);
+}
+.main__title {
+	font-size: 1.5rem;
+	color: var(--Cyan);
+	margin-bottom: 1.4rem;
+}
+.main__guarantee {
+	color: var(--Bright-Yellow);
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-bottom: 0.7rem;
+}
+.main__description {
+	color: var(--Grayish-Blue);
+	line-height: 1.7;
+	padding-right: 2rem;
+}
+.main__bottom {
+	display: flex;
+	color: white;
+}
+.main__subtitle {
+	font-size: 1.15rem;
+	color: white;
+}
+.main__left {
+	display: flex;
+	flex-direction: column;
+	background: var(--Cyan);
+	flex-basis: 50%;
+}
+.main__price-group {
+	display: flex;
+	align-items: center;
+	margin: 0.8rem 0;
+}
+.main__price {
+	font-size: 2rem;
+	font-weight: 700;
+}
+.main__month {
+	color: #72dede;
+	font-weight: 400;
+	margin-left: 1rem;
+}
+.main__sub-body {
+	font-size: 1rem;
+}
+.main__button {
+	width: 100%;
+	background: var(--Bright-Yellow);
+	margin-top: 1.7rem;
+	padding: 1rem 0;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border-radius: 5px;
+    box-shadow: 0 10px 30px 0px #3b9f72;
+}
+.main__right {
+	background: #4abebd;
+	flex-basis: 50%;
+}
+.main__right-body {
+	color: #a9f5f3;
+	font-size: 0.85rem;
+	line-height: 1.5;
+	margin-top: 1.15rem;
+	padding-right: 3rem;
+	white-space: pre-line;
+}
+
+
+
+/* 
+-------------------- Responsive  */
+@media screen and (max-width:430px) {
+    html {
+        font-size: 12px;
+    }
+    .container {
+        padding: 2rem 2rem 2.5rem;
+    }
+    .main {
+        max-width: 85vw;
+        width: 100%;
+        margin-top: 6rem;
+    }
+    .main__description {
+        padding-right: 0;
+    }
+    .main__bottom {
+        flex-direction: column;
+    }
+    .main__right-body {
+        font-size: 1rem;
+    }
 }
